@@ -13,3 +13,20 @@ function expinner(){
      console.log(exp1.textContent)
      //console.log(exp1.innerText)
 }
+
+//on mouse event
+
+function mousecat(){
+    const cat  = document.querySelector("#cutecat")
+    cat.style.height="400px"
+    cat.style.width="800px"
+}
+function reduceImage(){
+    const cat  = document.querySelector("#cutecat")
+    cat.style.height="200px"
+    cat.style.width="300px"
+}
+function show(){
+    const showbutton = document.querySelector(".mouseevent")
+    showbutton.style.opacity = "100"
+}
