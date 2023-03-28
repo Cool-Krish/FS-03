@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Staatliches");
+:root {
+  --onyx: #3A3042;
+  --coral: #FF784F;
+  --white-smoke: #F7F7F7;
+  --aqua-marine: #7CFFCB;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+}
+
+
+.exercise {
+  width: 60vw;
+  padding: 2rem;
+}
+
+.exercise__result {
+  padding: 1rem;
+  border-radius: 4px;
+  border: 2px solid var(--onyx);
+  min-height: 500px;
+  overflow: hidden scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+.has-children li {
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0;
+  border: 2px solid var(--onyx);
+  border-radius: 4px;
+  text-align: center;
+}
+
