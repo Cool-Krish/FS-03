@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0 auto;
+  max-width: 380px;
+  width: 100%;
+}
+
+.title {
+  border-left: 5px solid #e1e1e1;
+  padding-left: 5px;
+}
+
+.budget {
+  border: 5px solid #e1e1e1;
+  padding: 5px;
+  width: 20%;
+}
+
+.list {
+  border: 5px solid #e1e1e1;
+  box-shadow: 1px 3px 8px #888;
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  background: #eee;
+  padding: 10px 15px;
+  
+}
+li :hover {
+    background: darken(#eee, 5%);
+  }
+
+.purchased {
+  text-decoration: line-through;
+}
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Shopping List</h1>
+
+<ul class="list">
+  <li class="item">
+    MacBook Pro
+    <input class="budget" type="number" min=1>
+  </li>
+  <li class="item">
+    Logitech MX Keys
+    <input class="budget" type="number" min=1>
+  </li>
+  <li class="item">
+    Sony a6400 camera
+    <input class="budget" type="number" min=1>
+  </li>
+  <li class="item">
+    Boya universal cardioid microphone
+    <input class="budget" type="number" min=1>
+  </li>
+  <li class="item">
+    Light ring
+    <input class="budget" type="number" min=1>
+  </li>
+</ul>
+    <script src="capturing.js"></script>
+</body>
+</html>
