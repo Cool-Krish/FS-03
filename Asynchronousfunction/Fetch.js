@@ -1,16 +1,16 @@
 
-let lat = '25.3176';
-let lon = '82.9739';
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=25.3176&lon=82.9739&units=metric&appid=`;
-
-let weatherPromise = fetch(url);
-weatherPromise
-  .then((res) => {
-    
-    return res.json();
-  })
-  .then((data)=>console.log(data))
-  .catch((err) => console.log(err))
+//let lat = '25.3176';
+//let lon = '82.9739';
+//let url = `https://api.openweathermap.org/data/2.5/weather?lat=25.3176&lon=82.9739&units=metric&appid=`;
+//
+//let weatherPromise = fetch(url);
+//weatherPromise
+//  .then((res) => {
+//    
+//    return res.json();
+//  })
+//  .then((data)=>console.log(data))
+//  .catch((err) => console.log(err))
 
 
 let username="Cool-Krish"
@@ -29,19 +29,15 @@ githubUserPromise
   })
   .catch((err) => console.log(err));
 
-  let p1 = new Promise((res, rej) =>{
-    setTimeout(()=>res(100),1000)
+  let userNames = ["goelabhishek694", "vishnupumar","smulla786"];
+let allGithubUsersRequest = userNames.map(username => fetch(`https://api.github.com/users/${username}`))
+console.log(allGithubUsersRequest)
+Promise.all(allGithubUsersRequest)
+  .then((responseObjectArr) => {
+    console.log(responseObjectArr);
+    let userDataArr = responseObjectArr.map((resObj) => resObj.json());
+    console.log(userDataArr);
+    return Promise.all(userDataArr);
   })
-  let p2 = new Promise((res, rej) =>{
-    setTimeout(()=>res(100),3000)
-  })
-  let p3 = new Promise((res, rej) =>{
-    setTimeout(()=>res(100),4000)
-  })
-  let p4 = new Promise((res, rej) =>{
-    setTimeout(()=>res(100),5000)
-  })
-
-  let allpromises = Promise.all([p1,p2,p3,p4])
-  allpromises
-  .then(data => console.log(data))
+  .then((userDataArr) => userDataArr.forEach((user) => console.log(user)));
+  //display profile picture instead of printing object 

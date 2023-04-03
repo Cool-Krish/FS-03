@@ -1,0 +1,44 @@
+body{
+   
+}
+.main{
+    height: 150px;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(183, 124, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+#info_input{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    width: 70%;
+    margin: 5px auto;
+    
+}
+#info_input input{
+    border: 1.5px solid rgb(45, 231, 32);
+    padding-left: 10px;
+    border-radius: 5px;
+}
+#addplayer{
+    background:rgb(115, 19, 19);
+    
+    padding: 10px 20px;
+    border-color: rgb(173, 204, 48);
+    border-width: 2px;
+    border-style: solid;
+    font-size:14px;
+    border-radius:10px;
+    align-items: center;
+    cursor:pointer;
+    transition: background-color 0.4s, color 0.4s;
+}
+#addplayer:hover{
+    background-color: rgb(90, 80, 183);
+    color: white;
+}

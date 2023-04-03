@@ -84,3 +84,61 @@ p.then((res) => {
   return res * 2;
 });
 
+//let p1=new Promise((resolve,reject)=>{
+//  setTimeout(()=>resolve(100),1000)
+//})
+//let p2=new Promise((resolve,reject)=>{
+//  setTimeout(()=>reject(new Error("promise rejected")),7000)
+//})
+//let p3 = new Promise((resolve, reject) => {
+//  setTimeout(() => resolve(300), 3000);
+//});
+//let allPromise = Promise.all([p1, p2, p3]);
+//allPromise
+//  .then(data => console.log(data))
+//  .catch((err) => console.log(err));
+
+
+       //Promise.allSettled
+ let p1=new Promise((resolve,reject)=>{
+   setTimeout(()=>resolve(100),1000)
+ })
+ let p2=new Promise((resolve,reject)=>{
+   setTimeout(()=>reject(new Error("promise rejected")),7000)
+ })
+ let p3 = new Promise((resolve, reject) => {
+   setTimeout(() => resolve(300), 3000);
+ });
+ let allSetlledPromise = Promise.allSettled([p1, p2, p3]); //returns an array with values of promises, does not matter if promise has been resolved or rejected. It just waits for promise to get settled. 
+ allSetlledPromise
+   .then((data) => console.log(data))
+   .catch((err) => console.log(err));
+
+  // Promise.race
+  // simiilar to promise.all but waits for first settled promise.
+ let pr1 = new Promise((resolve, reject) => {
+   setTimeout(() => resolve(100), 10000);
+ });
+ let pr2 = new Promise((resolve, reject) => {
+   setTimeout(() => reject(new Error("promise rejected")), 1000);
+ });
+ let pr3 = new Promise((resolve, reject) => {
+   setTimeout(() => resolve(300), 3000);
+ });
+ let racePromise = Promise.race([pr1, pr2, pr3]); 
+ racePromise.then((data) => console.log(data)).catch((err) => console.log(err));
+
+
+// Promise.any 
+//return first fuflfilled promise
+let pa1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(100), 10000);
+});
+let pa2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(350), 1000);
+});
+let pa3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(300), 3000);
+});
+let anyPromise = Promise.race([pa1, pa2, pa3]); 
+racePromise.then((data) => console.log(data)).catch((err) => console.log(err));
