@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: bisque;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.mydiv{
+    
+    padding: 50px;
+    background-color: aquamarine;
+    width: 200px;
+}
+.alert_button{
+    background-color: chartreuse;
+    border-radius: 6px;
+    height: 35px;
+    width: 100px;
+}
+#h2{
+    margin-top: 15%;
+    color: blueviolet;
+}
+</style>
+<body>
+    <h2 id="h2"></h2>
+    <div class="mydiv">
+        <button class="alert_button" onclick="alert_massage()">Click Me</button>
+    </div>
+    <script>
+        let h2 = document.getElementById("h2")
+
+        function alert_massage(){
+            alert("your code is wroking")
+            h2.innerText = "your code is wroking" 
+        }
+
+    </script>
+</body>
+</html>
