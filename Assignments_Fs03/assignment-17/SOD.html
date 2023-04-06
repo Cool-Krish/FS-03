@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 100px;
+            background-color: azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mydiv{
+            height: 350px;
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        p{
+            color: rgb(28, 10, 2);
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+    <p id="screendetails"></p>
+    <p id="colordepth"></p>
+</div>
+
+    <script>
+
+const screenDetails = document.getElementById("screendetails")
+const colorOfscreen =  document.getElementById("colordepth")
+
+
+        var screenWidth = window.screen.width;
+var screenHeight = window.screen.height;
+var screenColorDepth = window.screen.colorDepth;
+
+// Display the screen information
+screenDetails.innerHTML="Screen width: " + screenWidth + "px <br>"+"Screen height: " + screenHeight + "px"
+
+colorOfscreen.innerHTML= "Screen color depth: " + screenColorDepth + "-bit"
+
+    </script>
+</body>
+</html>

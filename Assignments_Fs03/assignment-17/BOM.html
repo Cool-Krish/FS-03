@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+            margin: 0;
+            padding: 100px;
+            background-color: azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mydiv{
+            padding: 15px;
+            height: 350px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        p{
+            color: rgb(28, 10, 2);
+        }
+</style>
+<body>
+    <div class="mydiv">
+    <p id="url"></p>
+    <p id="details"></p>
+
+</div>
+
+
+    <script>
+
+        const Windowurl = document.getElementById("url")
+        const pixals = document.getElementById("details")
+        var currentURL = window.location.href;
+        Windowurl.innerHTML="Window URL IS :"+currentURL
+
+var windowWidth = window.innerWidth;
+var windowHeight = window.innerHeight;
+pixals.innerHTML="Window Width : " + windowWidth + "px <br> "+"Window Height : " + windowHeight + "px"
+    </script>
+</body>
+</html>
