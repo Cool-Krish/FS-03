@@ -1,0 +1,55 @@
+@font-face{
+    font-family: 'NotoColorEmoji';
+    src:url(fonts/NotoColorEmoji.ttf) format("trutype");
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    text-align:center;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+input{
+    width:70%;
+    font-size:19px;
+    padding:10px;
+    margin-bottom:30px;
+}
+
+ul{
+    font-family: NotoColorEmoji;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 100%;
+    height: auto;
+    
+    
+}
+ li{
+    font-size: 50px;
+    display: inline-block;
+    cursor: pointer;
+    padding:12px;
+}
+.fade{
+    animation: fade 0.25s
+    /* background-color: black; */
+}
+
+@keyframes fade{
+    0% {opacity:0;}
+    100%{opacity:0;}
+}
