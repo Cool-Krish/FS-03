@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+  }
+body{
+    
+    background: url(https://e1.pxfuel.com/desktop-wallpaper/595/427/desktop-wallpaper-js-posted-by-samantha-johnson-reactjs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-bar{
+    height: 90px;
+    width: 100%;
+    padding-right: 50px;
+    background-color: black;
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    gap:40px
+}
+.Options{
+    color: whitesmoke;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    height: 45%;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    
+    
+}
+.Options:hover {
+background-color: rgb(181, 25, 25);
+}
+.Heading{
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    margin-top: 9%;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.info{
+    color: white;
+    padding: 50px;
+    text-decoration-line: initial;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:inherit;
+}
+.Explore{
+    padding: 15px;
+    font-size: 22px;
+    color:rgb(146, 15, 11);
+    height: 60px;
+    width: 180px;
+    border: 2px solid rgb(146, 15, 11);
+    border-radius: 15px;
+    background-color: transparent;
+    margin-left: 42%;
+}
+div a:link, div a:visited {
+    text-decoration: none;
+    color: whitesmoke;
+
+  }
+  a:link, a:visited{
+    text-decoration: none;
+  }
+
+/* 
+  Product CSS */
+
+
+  
