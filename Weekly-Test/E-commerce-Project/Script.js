@@ -39,7 +39,7 @@ async function ProductDetail(){
               <p>${title}</p>
               <br>
       <h3>Price</h3>
-               <p>${Price}</p>
+               <p>&#36 ${Price}</p>
                <br>
       <h3>Description</h3>
       <p>${description}</p>
@@ -74,7 +74,7 @@ async function Jewellerys(){
               <p>${title}</p>
               <br>
       <h3>Price</h3>
-               <p>${Price}</p>
+               <p>&#36 ${Price}</p>
                <br>
       <h3>Description</h3>
       <p>${description}</p>
@@ -108,7 +108,7 @@ async function Mwearing(){
               <p>${title}</p>
               <br>
       <h3>Price</h3>
-               <p>${Price}</p>
+               <p>&#36 ${Price}</p>
                <br>
       <h3>Description</h3>
       <p>${description}</p>
@@ -143,7 +143,7 @@ async function Wwearing(){
               <p>${title}</p>
               <br>
       <h3>Price</h3>
-               <p>${Price}</p>
+               <p>&#36 ${Price}</p>
                <br>
       <h3>Description</h3>
       <p>${description}</p>
