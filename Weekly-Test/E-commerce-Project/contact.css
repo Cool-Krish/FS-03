@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    background-image: url(https://th.bing.com/th/id/R.47fcf8a270d0ce932cff930ac53b71f7?rik=C3QfNIR49iTmMQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fKYIFVDw.jpg&ehk=0%2fOljJjSGznfHwQuqqf0heM%2bRJ%2bKVMBFkdRsEucm1pE%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    
+  }
+
+  .container{
+    margin-top: 8%;
+    color: rgb(241, 237, 237);
+    height: 500px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .heading{
+    margin-left: 35%;
+  }
+  .Name{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+    
+  }
+  input{
+    border-radius: 2px;
+    padding: 10px;
+    border-color: antiquewhite;
+  }
+  #firstName, #lastName {
+    display:block;
+    width: 250px;
+    height: 25px;
+    background: rgb(191,191,191);
+  }
+  .Name input, label {
+    
+}
+#email{
+    height: 25px;
+    background: rgb(191,191,191);
+}
+#massage{
+    height: 35px;
+    background: rgb(191,191,191);
+}
+.submit{
+    background-color: rgb(170,144,49);
+    height: 35px;
+    width: 150px;
+    margin-left: 35%;
+}
