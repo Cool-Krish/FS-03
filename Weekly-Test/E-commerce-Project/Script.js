@@ -14,7 +14,7 @@ Elect.addEventListener("click",ProductDetail)
 Jewell.addEventListener("click",Jewellerys)
 Mens.addEventListener("click",Mwearing)
 Women.addEventListener("click",Wwearing)
-
+ProductDetail()
 async function ProductDetail(){
     const Apicall = await fetch(`https://fakestoreapi.com/products/14`)
 
