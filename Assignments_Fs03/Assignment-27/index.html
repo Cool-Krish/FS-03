@@ -5,8 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+        }
+        .main{
+            margin-top: 10%;
+            padding: 10px;
+            height: auto;
+            width: 300px;
+            background-color: rgb(45, 130, 130);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        input{
+            border-radius: 5px;
+            height: 20px;
+            padding: 3px;
+        }
+        #store{
+            height: 35px;
+            width: 80px;
+            border-radius: 10px;
+            background-color: cadetblue;
+        }
+        #clear{
+            height: 35px;
+            width: 80px;
+            border-radius: 10px;
+            background-color: cadetblue;
+        }
+        .btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
 </head>
 <body>
+    <div class="main">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name">
+        <label for="age">Age</label>
+        <input type="number" id="age">
+        <label for="country">Country</label>
+        <input type="text" name="" id="country">
+        <label for="city">City</label>
+        <input type="text" id="city">
+        <div class="btn">
+        <button id="store" onclick="Localstore()">Store</button>
+        <button id="clear" onclick="remove()">Clear</button>
+    </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
