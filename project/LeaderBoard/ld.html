@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Leaderboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: antiquewhite;
+      }
+      #addPlayerForm{
+        margin-left: 30%;
+        width: 400px;
+        height: 300px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      table {
+        border-collapse: collapse;
+        width: 60%;
+        margin-left: 20%;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      input {
+        padding: 8px;
+        border: 1px solid #ddd;
+        width: 100%;
+      }
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px;
+        border: none;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      #submitbtn{
+        margin-left: 40%;
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin-left: 38%;">Leaderboard</h1>
+    <form id="addPlayerForm">
+      <label for="playerName">Player Name:</label>
+      <input type="text" id="playerName" name="playerName" required>
+      <label for="playerCountry">Country:</label>
+      <input type="text" id="playerCountry" name="playerCountry" required>
+      <label for="playerScore">Score:</label>
+      <input type="number" id="playerScore" name="playerScore" min="0" required>
+      <input type="submit" id="submitbtn" value="Add Player">
+      
+    </form>
+    <table id="leaderboard">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player Name</th>
+          <th>Country</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+    <script>
+let leaderboard = [];
+
+function addPlayer(event) {
+  event.preventDefault();
+  let playerName = document.getElementById("playerName").value;
+  let playerCountry = document.getElementById("playerCountry").value;
+  let playerScore = document.getElementById("playerScore").value;
+  let player = { name: playerName, country: playerCountry, score: playerScore };
+  leaderboard.push(player);
+  leaderboard.sort((a, b) =>b.score - a.score);
+  updateLeaderboard();
+}
+
+function updateLeaderboard() {
+  let table = document.getElementById("leaderboard");
+  let tbody = table.getElementsByTagName("tbody")[0];
+  tbody.innerHTML = "";
+  for (let i = 0; i < leaderboard.length; i++) {
+    let rank = i + 1;
+    let player = leaderboard[i];
+    let row = `
+      <tr>
+        <td>${rank}</td>
+        <td>${player.name}</td>
+        <td>${player.country}</td>
+        <td>${player.score}</td>
+      </tr>
+    `;
+    tbody.innerHTML += row;
+  }
+}
+
+let form = document.getElementById("addPlayerForm");
+form.addEventListener("submit", addPlayer);
+</script>
+</body>
+</html>
+
+   
