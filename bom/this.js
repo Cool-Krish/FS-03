@@ -142,17 +142,60 @@ function welcome(email,age){
      age ${age}`)
 }
 
-welcome.call(user2,"kp3644@gmail.com",56)
-welcome.call(user1,"nitin3644@gmail.com",26)
+// welcome.call(user2,"kp3644@gmail.com",56)
+// welcome.call(user1,"nitin3644@gmail.com",26)
 
 //apply
 let arr = ["nitin36@gmail.com",27]
-welcome.apply(user1,arr)
+// welcome.apply(user1,arr)
 
 //bind
 
 let welcomekrishna = welcome.bind(user,"coolkrish@gnail.com",23)
-welcomekrishna()
+// welcomekrishna()
 
-welcomekrishna.call(user2)//no effect
-welcomekrishna.bind(user2)//no effect
+// welcomekrishna.call(user2)//no effect
+// welcomekrishna.bind(user2)//no effect
+
+
+//polyfills
+ let car = {
+    name: "thar",
+    brand: "mahindra"
+ }
+ let carDis = function (){
+    console.log(`I bought a new ${this.brand} ${this.name}`)
+
+ }
+// prototype is an obj which contain method and properties
+
+//prototype for bind method
+
+
+let car={
+    name:"Thar",
+    brand:"Mahindra"
+}
+
+let carDescription=function(){
+    console.log(`I bought a new ${this.brand} ${this.name}`);
+}
+
+//assume i do not have a bind function 
+// var bindedFn=carDescription.bind(car);
+
+// prototype is an obj which contains methods and properties 
+
+
+Function.prototype.myBind=function(arg){
+  let fn = this; //carDescription
+  return function () {
+    fn.call(arg);
+  };
+};
+
+
+
+var bindedFn=carDescription.myBind(car);
+console.log(bindedFn);
+bindedFn();
