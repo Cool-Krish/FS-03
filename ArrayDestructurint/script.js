@@ -47,18 +47,33 @@ var name = "Nitin"
 var arrow = () => {
      console.log("hello "+name)
 }
-arrow()
+// arrow()
 var arrow = (name)=>{
 console.log("hello-"+ name)
 }
-arrow(name)
+// arrow(name)
 
 var arrow = name =>{
     return ("hello_"+ name)//explicitly type return if curly braces present
 }
 arrow(name)
 var arrow = (name) => console.log("hello:"+name)
-arrow(name)
+// arrow(name)
 var arrow = name => "hello:-"+name //return whatever there in arrow function
-console.log(arrow(name))
+// console.log(arrow(name))
+
+var arr = [
+{
+name: "krishna",
+age:23
+},
+{
+    name2:"Nitin",
+    age: 25
+}]
+
+var [{name:name1}] = arr
+console.log(name1)
+
+
 
