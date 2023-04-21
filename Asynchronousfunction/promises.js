@@ -1,3 +1,5 @@
+
+
 let newPromise = new Promise(function (res, rej){
     setTimeout(() => res("promise resolve"), 3000)
     setTimeout(() => rej(new Error("Error occur")), 3000)
