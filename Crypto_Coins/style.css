@@ -52,11 +52,34 @@ footer{
     padding: 10px;
     display: inline-block;
     width: 100%;
-    position: fixed;
     bottom: 1px;
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.Heading{
+    text-align: center;
+}
+.top-coins{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card{
+    padding: 10px;
+    border: 2px solid #555;
+    height: 55%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+
 }
