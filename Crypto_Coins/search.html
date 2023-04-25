@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Site</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,26 +15,23 @@
     </div>
         <button><a href="search.html"> Search</a></button>
     </nav>
-<div class="main-box">
-    <div class="texts">
-        <h1>how Are you krishna</h1>
-        <p>bakki sab thik hain</p>
 
-    </div>
-    <div class="main-image">
-        <img src="" alt="" srcset="">
-    </div>
-</div>
-<section>
-    <h1 class="Heading">Top Coins</h1>
-    <div class="top-coins">
-        
-    </div>
-</section>
-<footer>
-    <p>@ CryptoViewer | Developed by Krishna</p>
-    <img src="" alt="logo">
-</footer>
-    <script src="script.js"></script>
+    <section >
+        <h1 id="heading">Search</h1>
+        <div class="coin-search">
+            <form action="" method="GET">
+                <input id="int" type="text" placeholder="Enter coin" name="q"/>
+                <input id="srch" type="submit" value="Search" />
+            </form>
+        </div>
+        <!--we will add all the card inside this div  -->
+        <div id="coin-results"></div>
+    </section>
+
+    <footer>
+        <p>© CryptoViewer | Developed by Abhishek </p>
+        <a href=""><img src="" alt=""></a>
+    </footer>
+    <script src="./search.js"></script>
 </body>
 </html>
