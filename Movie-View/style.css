@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(22,22,35);
+}
+
+.login{
+    margin: auto;
+    margin-top: 9%;
+    border: none;
+    border-radius: 20px;
+    background-color:rgb(31,31,45);
+    /* opacity: 0.8; */
+    color: white;
+    height: 70vh;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+.main-Image{
+    height: 100%;
+    width: 45%;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/599/7/652/2017-beauty-and-the-beast-8k-4k-wallpaper-preview.jpg);
+    background-position: center;
+    background-size: cover;
+}
+label{
+    display: block;
+}
+#Email, #pass{
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    
+    border-radius: 5px;
+}
+ 
+.Sign-in{
+    border: none;
+    border-radius: 7px;
+    height: 35px;
+    width: 100%;
+    background-color: rgb(240,35,60);
+}
+
+.login-Details{
+    padding: 35px;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    /* align-items:first baseline; */
+    flex-wrap: wrap;
+    gap: 15px;
+}
+a{
+    text-decoration: none;
+    color: beige;
+}
+#acenter{
+    text-align: center;
+}
+#Forgot{
+    text-align: end;
+}
+
+/* Home.html CSS */
+.Nav-bar{
+    width: 100%;
+    height: 90px;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+.Logo{
+    width: 20%;
+    height: 100%;
+    
+}
+.Logo-icon{
+    margin-left: 25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    background-blend-mode:darken;
+
+}
+.Search{
+    padding: 10px;
+    height: 50%;
+    width: 50%;
+    border-radius: 50px;
+}
+.Options{
+    
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+.User-logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    background-blend-mode: multiply;
+}
