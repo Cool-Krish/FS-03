@@ -9,16 +9,29 @@ body{
     background-color: rgb(22,22,35);
     /* overflow:hidden; */
 }
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(22,22,35);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(76, 76, 113);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(53, 47, 37);  /* creates padding around scroll thumb */
+  }
 
 .login{
     margin: auto;
-    margin-top: 9%;
+    margin-top: 5%;
     border: none;
     border-radius: 20px;
     background-color:rgb(31,31,45);
     /* opacity: 0.8; */
     color: white;
-    height: 70vh;
+    height: 80vh;
     width: 60%;
     display: flex;
     flex-direction: row;
@@ -33,7 +46,7 @@ body{
 label{
     display: block;
 }
-#Email, #pass{
+#Email, #Uname, #Name, #Age, #pass{
     height: 35px;
     width: 100%;
     padding: 10px;
@@ -136,10 +149,11 @@ a{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 15px;
     align-items:baseline;
 }
 .Genre, .kk{
+    
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -147,13 +161,38 @@ a{
     align-items: baseline;
     color: antiquewhite;
 }
+.Bar-cnt{
+    border-radius: 0 50% 0 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.Bar-cnt:hover{
+    background-color: darkgray;
+}
+.cate, .language{
+    width: 100%;
+    border-radius: 0 50% 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cate:hover{
+    background-color: darkgray;
+}
+.language:hover{
+    background-color: darkgray;
+}
 .Movies-container{
-    border: 1px solid red;
+    height: auto;
     width: 60%;
     padding: 20px;
+    position: relative;
 }
 .New-trailers{
-    border: 1px solid red;
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -161,24 +200,27 @@ a{
     height: auto;
     padding: 25px;
 }
+
 .NTrail{
     width: 100%;
     height: 30%;
     padding: 20px;
 }
-.See-More{
+.See-More, .Popular-More{
     cursor: pointer;
     color: darkgray;
 }
-.ShowMovies{
+.ShowMovies, .Popular{
+    padding: 5px;
     width: 100%;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
     overflow: hidden;
 }
+
 .card{
     border: none;
     height: 100%;
@@ -186,7 +228,10 @@ a{
     color: beige;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    
     font-size: 16px;
 }
 .cards{
@@ -200,7 +245,7 @@ a{
     font-size: 16px;
 }
 .card-img{
-    height: 70%;
+    height: 60%;
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -225,8 +270,9 @@ a{
 .checked{
     color: yellow;
 }
-.mystyle{
+.mystyle, .myh{
     height: auto;
+    /* z-index: 999; */
 }
 
 .Heading{
@@ -235,4 +281,15 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.SearchResult{
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+
 }
