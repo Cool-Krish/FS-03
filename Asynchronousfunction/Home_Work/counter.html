@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .main{
+            margin-top: 10%;
+            margin-left: 40%;
+            height: 400px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <Div class="main">
+        <button onclick="pluse()">+</button>
+        <p class="counter">0</p>
+        <button onclick="minus()">-</button>
+    </Div>
+    <script>
+
+        // var count = document.getElementById('counter')
+        
+        function pluse(){
+            let output = document.querySelector('.counter')
+            let result = Number(output.innerText)+1
+            if(result>10){
+                result = 0
+            }
+            output.innerText = result
+        }
+        function minus(){
+            let output = document.querySelector('.counter')
+            let result = Number(output.innerText)-1
+            if(result<0){
+                result =10
+            }
+            output.innerText = result
+        }
+    </script>
+</body>
+</html>
