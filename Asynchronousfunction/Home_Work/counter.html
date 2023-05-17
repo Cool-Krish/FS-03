@@ -19,6 +19,7 @@
 </head>
 <body>
     <Div class="main">
+        <h1 class="countDown">0</h1>
         <button onclick="pluse()">+</button>
         <p class="counter">0</p>
         <button onclick="minus()">-</button>
@@ -26,7 +27,15 @@
     <script>
 
         // var count = document.getElementById('counter')
-        
+        let id = setInterval(() => {
+            let c = document.querySelector('.countDown')
+            let res = Number(c.innerText)+1
+            c.innerText = res
+            if(res == 5){
+            clearInterval(id)
+            
+            }
+        }, 1000)
         function pluse(){
             let output = document.querySelector('.counter')
             let result = Number(output.innerText)+1
